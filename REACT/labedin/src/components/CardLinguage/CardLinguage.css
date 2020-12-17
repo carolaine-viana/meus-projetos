@@ -1,0 +1,10 @@
+.linguage-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    padding: 50px 50px;
+    margin-bottom: 10px;
+    height: 200px;
+    flex-direction: column;
+    text-align: start;
+}

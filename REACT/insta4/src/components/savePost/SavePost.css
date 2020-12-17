@@ -1,0 +1,7 @@
+.savepost-container {
+    display: flex;
+}
+
+.savepost-container img {
+    margin-right: 5px;
+}
