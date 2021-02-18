@@ -1,6 +1,6 @@
 # Pagina de login
 
-Com validacao de e-mail, senha e forca de senha.
+Com valiação de e-mail e senha.
 
 Acesse: http://medsenior.surge.sh
 
