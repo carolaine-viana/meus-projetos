@@ -1,1 +1,3 @@
-Sejam bem vindos ao Labe-commerce, esse repositório contém um esqueleto de app React e um .gitignore.
+Loja e-commerce de um site de usados.
+
+Utilizando react + react avancado. Hooks + UseState.
