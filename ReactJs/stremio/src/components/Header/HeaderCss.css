@@ -1,0 +1,36 @@
+@import url('http://fonts.cdnfonts.com/css/valorant');
+
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    padding: 0.7rem;
+    cursor: pointer;
+    color: black;
+    font-family: 'VALORANT', sans-serif;
+}
+
+.Header{
+    background-color: white;
+    height: 8vh;
+}
+
+.label-text {
+    padding: 1.9rem 3rem;
+    background-color: transparent;
+    font-family: 'VALORANT', sans-serif;
+    padding: 20px;
+}
+
+
+
+
+
+
+  
+   
+    
+ 
+    
+  
