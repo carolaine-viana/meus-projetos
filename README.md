@@ -16,7 +16,5 @@ Acesse: http://medsenior.surge.sh
 
 MOBILE:
 
-React Native > Curriculo
-Aplicativos mobile iOS utilizando xcode Simulator.
-
-React Natie > APP site de filmes.
+React Native - Aplicativos mobile iOS utilizando xcode Simulator > 
+App de filmes.
