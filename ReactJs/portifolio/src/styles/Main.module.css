@@ -1,0 +1,381 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #343437;
+    color: white;
+}
+
+.Main{
+  margin: 0px;
+  margin-top: -10px;
+  @media (max-width: 700) {
+      display: flex;
+      flex-direction: column;
+  }
+}
+
+/* HEADER  */
+
+header{
+    width: 100%;
+    height: 80vh;
+    background-color: black;
+}
+
+img {
+    margin-left: 5vw;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.links p{
+    margin-left: 10px;
+}
+
+button{
+    border-radius: 2em;
+    margin-left: 10px;
+    width: 10vw;
+    height: 5vh;
+    border: none;
+    color: white;
+    background-color: var(--verde);
+}
+
+.container{
+  display: flex;
+  Max-width : 100vw;
+  margin-top: 10%;
+}
+
+.resume{
+  width: 50%;
+  padding: 50px;
+  @media only screen and (max-width: 800px) {
+      text-align: center;
+      color: red;
+}
+}
+
+.resume button{
+  margin-top: 50px;
+  margin-left: 2px;
+}
+
+.resume > h2 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  @media (max-width: 800px) {
+    text-align: center;
+    color: red;
+}
+}
+
+.imageCenter{
+  width: 50%;
+
+}
+
+/* STACKS  */
+
+
+.stacks{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 60vh;
+  background-color: #343437;
+  background-image: url(../assets/vector.png);
+  background-repeat: no-repeat;
+  padding: 50px;
+ 
+}
+
+.card1{
+  width: 20vw;
+  height: 40vh;
+  margin: auto;
+  background-color: black;
+  border-radius: 2em;
+  border-bottom: 50px solid var(--verde);
+ 
+}
+
+.card1 > img:first-child{
+  width: 100px;
+  padding: 10px;
+}
+
+
+.card1 > img:last-child{
+  width: 5vw;
+  margin-top: 5vh;
+}
+
+/* PROJETCS  */
+
+.project{
+  display: flex;
+  padding: 30px;
+  background-color: #343437;
+  width: 100%;
+  height: 70vh;
+  /* background-image: url(../assets/vector.png); */
+  background-repeat: no-repeat;
+  justify-content: space-between;
+}
+
+.textProject{
+  width: 100%;
+  padding: 50px;
+}
+
+.project p {
+  text-align: center;
+}
+
+.CardProject{
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 30vw;
+  height: 40vw;
+  background-color: black;
+  border-radius: 2em;
+  border-bottom: 50px solid var(--verde);
+  overflow: hidden;
+}
+
+.CardProject > p {
+  font-size: 0.9rem;
+}
+
+.imageProject{
+  width: 30vh;
+  padding: 50px;
+  border-radius: 2em;
+}
+
+.git{
+  margin-top: 30px;
+  align-items: center;
+}
+
+/* ABOUT ME */
+
+.aboutme{
+  width: 100%;
+  height: 60vh;
+  background-color: #343437;
+  background-image: url(../assets/vector.png);
+  background-repeat: no-repeat;
+}
+
+
+.cardAboutMe{
+  padding: 50px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  width: 50vw;
+  height: 30vw;
+  margin: auto;
+  margin-top: 50px;
+  border: none;
+  background-color: black;
+  border-radius: 2em;
+  border-bottom: 50px solid var(--verde);
+}
+
+
+.cardAboutMe h1{
+  color: var(--verde)
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+}
+
+/* FOOTER  */
+
+.footer{
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  bottom: 0px;
+  background-color: var(--verde);
+}
+
+.footer img:last-child{
+  align-items: center;
+  margin: auto;
+  margin-left: 2vw;
+  cursor: pointer;
+}
+
+/* media query */
+
+/* celulares */
+@media screen and (min-width: 320px) and (max-width: 570px){
+  .stacks {
+    display: flex;
+    flex-direction: column;
+}
+
+.stacks > .card1 > img:first-child{
+    width: 50px;
+    height: 50px;
+}
+
+  .card1 > img{
+    width: 10px;
+    height: 10px;
+  }
+
+  .project > .CardProject {
+      width: 200px;
+      height: 600px;
+      padding: 10px;
+      border-bottom: none;
+  }
+
+  .aboutme > .cardAboutMe{
+    width: 200px;
+    height: 200px;
+    font-size: 10px;
+    border-bottom: none;
+    padding: 10px;
+  }
+
+  .footer > img{
+      width: 100px;
+  }
+
+  .footer > a > img{
+    width: 30px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 800px){
+
+  .links{
+    background-color: black;
+  }
+
+  .links > p{
+    display: none;
+  }
+
+  .resume > h2 {
+    font-size: 10px;
+  }
+
+  .resume > h1 {
+    font-size: 20px;
+  }
+
+  .stacks {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .card1{
+      object-fit: cover;
+      background-color: red;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 50px;
+      height: 50px;
+  }
+
+  .card1 > img:first-child{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+  }
+
+  .card1 > img:last-child{
+    display: none;
+  }
+
+  .project{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .stacks > .card1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .stacks{
+    margin-top: 50px;
+    padding: 50px;
+  }
+
+  .CardProject {
+    width: 60%;
+    height: 80%;
+    margin: auto;
+    border-radius: 2em;
+    border-bottom: 30px solid var(--verde);
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .CardProject > img:first-child{
+    display: none;
+}
+
+  .CardProject > img:last-child{
+      display: none;
+  }
+
+  .CardProject > p {
+    align-items: center;
+    margin: auto;
+    padding: 5px;
+  }
+
+  .aboutme{
+    width: 100px;
+    padding-left: 50px;
+  }
+
+  .cardAboutMe{
+    width: 300px;
+    height: 300px;
+  }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 780px) {
+    .resume > h2{
+      font-size: 15px;
+    }
+
+    .imageCenter > img{
+        width: 200px;
+    }
+}
+
+
+
+
+
