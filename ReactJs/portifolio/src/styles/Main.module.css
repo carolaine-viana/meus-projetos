@@ -103,7 +103,7 @@ button{
 
 .card1{
   width: 20vw;
-  height: 40vh;
+  height: 50vh;
   margin: auto;
   background-color: black;
   border-radius: 2em;
@@ -133,6 +133,7 @@ button{
   /* background-image: url(../assets/vector.png); */
   background-repeat: no-repeat;
   justify-content: space-between;
+  margin-bottom: 300px;
 }
 
 .textProject{
@@ -147,22 +148,31 @@ button{
 .CardProject{
   flex-direction: row;
   flex-wrap: wrap;
-  width: 30vw;
-  height: 40vw;
+  width: 25vw;
   background-color: black;
   border-radius: 2em;
   border-bottom: 50px solid var(--verde);
   overflow: hidden;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
 }
 
 .CardProject > p {
   font-size: 0.9rem;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .imageProject{
-  width: 30vh;
-  padding: 50px;
-  border-radius: 2em;
+  border-radius: 1em;
+  height: 40vh;
+  margin: auto;
+}
+
+.CardProject > img:first-child{
+  width: 5vw;
 }
 
 .git{
@@ -178,6 +188,7 @@ button{
   background-color: #343437;
   background-image: url(../assets/vector.png);
   background-repeat: no-repeat;
+  margin-bottom: 200px;
 }
 
 
@@ -186,7 +197,7 @@ button{
   display: flex;
   overflow: hidden;
   flex-direction: column;
-  width: 50vw;
+  width: 40vw;
   height: 30vw;
   margin: auto;
   margin-top: 50px;
