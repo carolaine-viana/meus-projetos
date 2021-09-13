@@ -1,1 +1,1 @@
-![Captura de Tela 2021-09-13 às 20 39 22](https://user-images.githubusercontent.com/65136543/133170781-c370aec0-895e-4bae-aa39-b0b417b87efc.png)
+![Captura de Tela 2021-09-13 às 20 39 53](https://user-images.githubusercontent.com/65136543/133170812-c06a8328-3b82-47a2-91f6-5f1f052d9e92.png)
