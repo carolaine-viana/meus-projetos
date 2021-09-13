@@ -19,10 +19,8 @@ import Home from './src/views/Home';
 import {ThemeProvider} from 'styled-components';
 import {useColorScheme} from 'react-native';
 import themes from './src/themes';
-import {createDrawerNavigator} from '@react-navigation/drawer';
 
 const Stack = createStackNavigator();
-const Drawer = createDrawerNavigator();
 
 const App = () => {
   const deviceTheme = useColorScheme(); //retorna dark, light ou null (qnd n encontra a cor)

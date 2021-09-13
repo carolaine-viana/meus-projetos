@@ -234,7 +234,6 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    fontFamily: 'Poppins-Regular',
     fontSize: 18,
     color: 'black',
   },

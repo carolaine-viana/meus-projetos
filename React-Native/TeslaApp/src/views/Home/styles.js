@@ -10,7 +10,6 @@ export const Wrapper = styled.View`
 export const Title = styled.Text`
     color: ${props => props.theme.color};
     font-size: 44px;
-    font-family: 'FjallaOne-Regular';
     margin-bottom: 10px;
     color: grey;
 `

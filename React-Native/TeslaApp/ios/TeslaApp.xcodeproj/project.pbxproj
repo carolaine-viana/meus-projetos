@@ -11,38 +11,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		66A895DF8EE63E61400692C4 /* libPods-TeslaApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD57C242E5DEE8291B876EDC /* libPods-TeslaApp.a */; };
+		40B34D60EBB60FB34871653C /* libPods-TeslaApp-TeslaAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 459AABA2D377D43AB1B61AB9 /* libPods-TeslaApp-TeslaAppTests.a */; };
+		46B403C8ACC398E80848421E /* libPods-TeslaApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B6DB820FB11543AA93C24E /* libPods-TeslaApp.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		BFE20B86324C12E0F82E3AA7 /* libPods-TeslaApp-TeslaAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F8B8EFC05260E75C53895C /* libPods-TeslaApp-TeslaAppTests.a */; };
-		0522FD33FD0146E4A874CCA2 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D65D05545DC049AE88E94578 /* Roboto-Black.ttf */; };
-		4E31125529034F3EAAAAE156 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D96F1B2E281444F28EECFC96 /* Roboto-BlackItalic.ttf */; };
-		559E65289451416195F6DD32 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3AEBCB28CA984C9F93E5D98B /* Roboto-Bold.ttf */; };
-		99C1BF362750450E8E48A765 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E7318D641934B648B16BF0A /* Roboto-BoldItalic.ttf */; };
-		D4DBE9BE4E184D88B736A78F /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5F2CBC4F74A4B5A9E82D0AF /* Roboto-Light.ttf */; };
-		7BC197897B2D4C66801EBD07 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86EBCBE25EBD413F8C2821EF /* Roboto-LightItalic.ttf */; };
-		5FAB98F6D15E40E3B9DD0982 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BE23F06A9E340E887C7571E /* Roboto-Medium.ttf */; };
-		A0930B0F5180403CBE0226B5 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5306FE0425840558F9E52F2 /* Roboto-MediumItalic.ttf */; };
-		9318C563698B4481A5CF2A61 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90C72E2351244E5FB07DE50C /* Roboto-Thin.ttf */; };
-		C7646D543ADC4ADAA7DB9671 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F0223B341FE499698D32CE0 /* Roboto-ThinItalic.ttf */; };
-		A481F23EFD124D0F930D8353 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34C27890637D4621BE0F0921 /* Poppins-Black.ttf */; };
-		8C3B5E72EB2D4D2E8D4A91C1 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9844CAF27DA44E69AA417A26 /* Poppins-BlackItalic.ttf */; };
-		7592993280B0421B8D77CAC0 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8EB65D8AD5A4F72B6C45AA0 /* Poppins-Bold.ttf */; };
-		1294BA6A97A245208852C637 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C56A6481287840A3A78572AD /* Poppins-BoldItalic.ttf */; };
-		4792B31D93464B44879735B3 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6B6279D86EC44E6BF113F8C /* Poppins-ExtraBold.ttf */; };
-		12E32C8898424243B1A55883 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47DCBBC075F948168D9CC695 /* Poppins-ExtraBoldItalic.ttf */; };
-		F069D58335DC45BE92852488 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A9B8CB34ECF40F7AFB75657 /* Poppins-ExtraLight.ttf */; };
-		83FAB3C3648840959356925A /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2D97834B8FC4FD1AEE8CF55 /* Poppins-ExtraLightItalic.ttf */; };
-		2CA7686D31C14B55B1985D3C /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 093E78116C1F4138A95480D2 /* Poppins-Italic.ttf */; };
-		729CD7053FD2455AAD582A73 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4108544B10964BABBEB26B14 /* Poppins-Light.ttf */; };
-		60DFD0BFE7F640138BD81935 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B597BBABE4A473BA5D3ECFD /* Poppins-LightItalic.ttf */; };
-		0A5551B2E47C46D2877D9F92 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C27561AADED44951AAE08F5A /* Poppins-Medium.ttf */; };
-		0BDA7FE938534BFCBF2213EE /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2BBBE6F91D94CF5B2B65885 /* Poppins-MediumItalic.ttf */; };
-		23B5EECC4BE14314B0BBA080 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 762036DF263848A592D90CA5 /* Poppins-Regular.ttf */; };
-		E9926E4BEE4D4AEE95F53EBD /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1FA4403536F476B98C0BFA5 /* Poppins-SemiBold.ttf */; };
-		ED615FB1F82A4B7E98518C97 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FB0CE26A302471D843C9596 /* Poppins-SemiBoldItalic.ttf */; };
-		31236E20DFFA443594C105BA /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 485E484AF3B141229F8783E8 /* Poppins-Thin.ttf */; };
-		DBB80F0F51E3426AB4078E8C /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B039C501E6EB46849D59674A /* Poppins-ThinItalic.ttf */; };
-		51A0ED268CB441BA8015CAA0 /* FjallaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86877022E99C495099ED1888 /* FjallaOne-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,43 +36,14 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TeslaApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TeslaApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TeslaApp/main.m; sourceTree = "<group>"; };
-		4DF480A14DBE375F855C1BA4 /* Pods-TeslaApp-TeslaAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeslaApp-TeslaAppTests.release.xcconfig"; path = "Target Support Files/Pods-TeslaApp-TeslaAppTests/Pods-TeslaApp-TeslaAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		360AF9EDE9D7832AE42B715E /* Pods-TeslaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeslaApp.release.xcconfig"; path = "Target Support Files/Pods-TeslaApp/Pods-TeslaApp.release.xcconfig"; sourceTree = "<group>"; };
+		459AABA2D377D43AB1B61AB9 /* libPods-TeslaApp-TeslaAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeslaApp-TeslaAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B6A97B9816E792232E4F52A /* Pods-TeslaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeslaApp.debug.xcconfig"; path = "Target Support Files/Pods-TeslaApp/Pods-TeslaApp.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TeslaApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		86F8B8EFC05260E75C53895C /* libPods-TeslaApp-TeslaAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeslaApp-TeslaAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D2CC79A3B4DCD325F0045DF /* Pods-TeslaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeslaApp.release.xcconfig"; path = "Target Support Files/Pods-TeslaApp/Pods-TeslaApp.release.xcconfig"; sourceTree = "<group>"; };
-		95EF501E7FD6FBA1F6E9222F /* Pods-TeslaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeslaApp.debug.xcconfig"; path = "Target Support Files/Pods-TeslaApp/Pods-TeslaApp.debug.xcconfig"; sourceTree = "<group>"; };
-		BD57C242E5DEE8291B876EDC /* libPods-TeslaApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeslaApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D89BABA29F183771D4974912 /* Pods-TeslaApp-TeslaAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeslaApp-TeslaAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TeslaApp-TeslaAppTests/Pods-TeslaApp-TeslaAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		98393C9D3C1428AB1D102AC1 /* Pods-TeslaApp-TeslaAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeslaApp-TeslaAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TeslaApp-TeslaAppTests/Pods-TeslaApp-TeslaAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A469AB83F99B21A59A80D262 /* Pods-TeslaApp-TeslaAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeslaApp-TeslaAppTests.release.xcconfig"; path = "Target Support Files/Pods-TeslaApp-TeslaAppTests/Pods-TeslaApp-TeslaAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		D5B6DB820FB11543AA93C24E /* libPods-TeslaApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeslaApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		D65D05545DC049AE88E94578 /* Roboto-Black.ttf */ = {isa = PBXFileReference; name = "Roboto-Black.ttf"; path = "../src/assets/fonts/Roboto-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D96F1B2E281444F28EECFC96 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-BlackItalic.ttf"; path = "../src/assets/fonts/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3AEBCB28CA984C9F93E5D98B /* Roboto-Bold.ttf */ = {isa = PBXFileReference; name = "Roboto-Bold.ttf"; path = "../src/assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6E7318D641934B648B16BF0A /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-BoldItalic.ttf"; path = "../src/assets/fonts/Roboto-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E5F2CBC4F74A4B5A9E82D0AF /* Roboto-Light.ttf */ = {isa = PBXFileReference; name = "Roboto-Light.ttf"; path = "../src/assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		86EBCBE25EBD413F8C2821EF /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-LightItalic.ttf"; path = "../src/assets/fonts/Roboto-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0BE23F06A9E340E887C7571E /* Roboto-Medium.ttf */ = {isa = PBXFileReference; name = "Roboto-Medium.ttf"; path = "../src/assets/fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C5306FE0425840558F9E52F2 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-MediumItalic.ttf"; path = "../src/assets/fonts/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		90C72E2351244E5FB07DE50C /* Roboto-Thin.ttf */ = {isa = PBXFileReference; name = "Roboto-Thin.ttf"; path = "../src/assets/fonts/Roboto-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0F0223B341FE499698D32CE0 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-ThinItalic.ttf"; path = "../src/assets/fonts/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		34C27890637D4621BE0F0921 /* Poppins-Black.ttf */ = {isa = PBXFileReference; name = "Poppins-Black.ttf"; path = "../src/assets/fonts/Poppins-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9844CAF27DA44E69AA417A26 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-BlackItalic.ttf"; path = "../src/assets/fonts/Poppins-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B8EB65D8AD5A4F72B6C45AA0 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C56A6481287840A3A78572AD /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-BoldItalic.ttf"; path = "../src/assets/fonts/Poppins-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E6B6279D86EC44E6BF113F8C /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Poppins-ExtraBold.ttf"; path = "../src/assets/fonts/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		47DCBBC075F948168D9CC695 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3A9B8CB34ECF40F7AFB75657 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Poppins-ExtraLight.ttf"; path = "../src/assets/fonts/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B2D97834B8FC4FD1AEE8CF55 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-ExtraLightItalic.ttf"; path = "../src/assets/fonts/Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		093E78116C1F4138A95480D2 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; name = "Poppins-Italic.ttf"; path = "../src/assets/fonts/Poppins-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4108544B10964BABBEB26B14 /* Poppins-Light.ttf */ = {isa = PBXFileReference; name = "Poppins-Light.ttf"; path = "../src/assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		8B597BBABE4A473BA5D3ECFD /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-LightItalic.ttf"; path = "../src/assets/fonts/Poppins-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C27561AADED44951AAE08F5A /* Poppins-Medium.ttf */ = {isa = PBXFileReference; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F2BBBE6F91D94CF5B2B65885 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-MediumItalic.ttf"; path = "../src/assets/fonts/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		762036DF263848A592D90CA5 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E1FA4403536F476B98C0BFA5 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7FB0CE26A302471D843C9596 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-SemiBoldItalic.ttf"; path = "../src/assets/fonts/Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		485E484AF3B141229F8783E8 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; name = "Poppins-Thin.ttf"; path = "../src/assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B039C501E6EB46849D59674A /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-ThinItalic.ttf"; path = "../src/assets/fonts/Poppins-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		86877022E99C495099ED1888 /* FjallaOne-Regular.ttf */ = {isa = PBXFileReference; name = "FjallaOne-Regular.ttf"; path = "../src/assets/fonts/FjallaOne-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFE20B86324C12E0F82E3AA7 /* libPods-TeslaApp-TeslaAppTests.a in Frameworks */,
+				40B34D60EBB60FB34871653C /* libPods-TeslaApp-TeslaAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66A895DF8EE63E61400692C4 /* libPods-TeslaApp.a in Frameworks */,
+				46B403C8ACC398E80848421E /* libPods-TeslaApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				BD57C242E5DEE8291B876EDC /* libPods-TeslaApp.a */,
-				86F8B8EFC05260E75C53895C /* libPods-TeslaApp-TeslaAppTests.a */,
+				D5B6DB820FB11543AA93C24E /* libPods-TeslaApp.a */,
+				459AABA2D377D43AB1B61AB9 /* libPods-TeslaApp-TeslaAppTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -179,8 +121,7 @@
 				00E356EF1AD99517003FC87E /* TeslaAppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				B79801DBA4471BD25AD72BE4 /* Pods */,
-				6342E9DB38FF4AB084954DCD /* Resources */,
+				891A5EE1BA28500F054FCE17 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -196,54 +137,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B79801DBA4471BD25AD72BE4 /* Pods */ = {
+		891A5EE1BA28500F054FCE17 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				95EF501E7FD6FBA1F6E9222F /* Pods-TeslaApp.debug.xcconfig */,
-				8D2CC79A3B4DCD325F0045DF /* Pods-TeslaApp.release.xcconfig */,
-				D89BABA29F183771D4974912 /* Pods-TeslaApp-TeslaAppTests.debug.xcconfig */,
-				4DF480A14DBE375F855C1BA4 /* Pods-TeslaApp-TeslaAppTests.release.xcconfig */,
+				5B6A97B9816E792232E4F52A /* Pods-TeslaApp.debug.xcconfig */,
+				360AF9EDE9D7832AE42B715E /* Pods-TeslaApp.release.xcconfig */,
+				98393C9D3C1428AB1D102AC1 /* Pods-TeslaApp-TeslaAppTests.debug.xcconfig */,
+				A469AB83F99B21A59A80D262 /* Pods-TeslaApp-TeslaAppTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		6342E9DB38FF4AB084954DCD /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				D65D05545DC049AE88E94578 /* Roboto-Black.ttf */,
-				D96F1B2E281444F28EECFC96 /* Roboto-BlackItalic.ttf */,
-				3AEBCB28CA984C9F93E5D98B /* Roboto-Bold.ttf */,
-				6E7318D641934B648B16BF0A /* Roboto-BoldItalic.ttf */,
-				E5F2CBC4F74A4B5A9E82D0AF /* Roboto-Light.ttf */,
-				86EBCBE25EBD413F8C2821EF /* Roboto-LightItalic.ttf */,
-				0BE23F06A9E340E887C7571E /* Roboto-Medium.ttf */,
-				C5306FE0425840558F9E52F2 /* Roboto-MediumItalic.ttf */,
-				90C72E2351244E5FB07DE50C /* Roboto-Thin.ttf */,
-				0F0223B341FE499698D32CE0 /* Roboto-ThinItalic.ttf */,
-				34C27890637D4621BE0F0921 /* Poppins-Black.ttf */,
-				9844CAF27DA44E69AA417A26 /* Poppins-BlackItalic.ttf */,
-				B8EB65D8AD5A4F72B6C45AA0 /* Poppins-Bold.ttf */,
-				C56A6481287840A3A78572AD /* Poppins-BoldItalic.ttf */,
-				E6B6279D86EC44E6BF113F8C /* Poppins-ExtraBold.ttf */,
-				47DCBBC075F948168D9CC695 /* Poppins-ExtraBoldItalic.ttf */,
-				3A9B8CB34ECF40F7AFB75657 /* Poppins-ExtraLight.ttf */,
-				B2D97834B8FC4FD1AEE8CF55 /* Poppins-ExtraLightItalic.ttf */,
-				093E78116C1F4138A95480D2 /* Poppins-Italic.ttf */,
-				4108544B10964BABBEB26B14 /* Poppins-Light.ttf */,
-				8B597BBABE4A473BA5D3ECFD /* Poppins-LightItalic.ttf */,
-				C27561AADED44951AAE08F5A /* Poppins-Medium.ttf */,
-				F2BBBE6F91D94CF5B2B65885 /* Poppins-MediumItalic.ttf */,
-				762036DF263848A592D90CA5 /* Poppins-Regular.ttf */,
-				E1FA4403536F476B98C0BFA5 /* Poppins-SemiBold.ttf */,
-				7FB0CE26A302471D843C9596 /* Poppins-SemiBoldItalic.ttf */,
-				485E484AF3B141229F8783E8 /* Poppins-Thin.ttf */,
-				B039C501E6EB46849D59674A /* Poppins-ThinItalic.ttf */,
-				86877022E99C495099ED1888 /* FjallaOne-Regular.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -252,12 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "TeslaAppTests" */;
 			buildPhases = (
-				4D20238254AC23DDE2EDA8F6 /* [CP] Check Pods Manifest.lock */,
+				CBE18988DCD926CE7D66017D /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				DAD7C4A398E77D8288A56627 /* [CP] Embed Pods Frameworks */,
-				D12DC561DEC44C29C9DC4A69 /* [CP] Copy Pods Resources */,
+				65CD34DBC13F7B977A72D1F1 /* [CP] Embed Pods Frameworks */,
+				5040407A835B7C96EA7F914F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,14 +177,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "TeslaApp" */;
 			buildPhases = (
-				9F2D37F68EFAB0F0F00E00BD /* [CP] Check Pods Manifest.lock */,
+				32A8AA0150D85E3E773CECE1 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				DF24AEB43D166E88C54B501B /* [CP] Embed Pods Frameworks */,
-				E1435D64277CC3C41463FBBC /* [CP] Copy Pods Resources */,
+				4A1304B6EFE467CEA6202AA2 /* [CP] Embed Pods Frameworks */,
+				39AE7EC55113C67463438B28 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -341,35 +245,6 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				0522FD33FD0146E4A874CCA2 /* Roboto-Black.ttf in Resources */,
-				4E31125529034F3EAAAAE156 /* Roboto-BlackItalic.ttf in Resources */,
-				559E65289451416195F6DD32 /* Roboto-Bold.ttf in Resources */,
-				99C1BF362750450E8E48A765 /* Roboto-BoldItalic.ttf in Resources */,
-				D4DBE9BE4E184D88B736A78F /* Roboto-Light.ttf in Resources */,
-				7BC197897B2D4C66801EBD07 /* Roboto-LightItalic.ttf in Resources */,
-				5FAB98F6D15E40E3B9DD0982 /* Roboto-Medium.ttf in Resources */,
-				A0930B0F5180403CBE0226B5 /* Roboto-MediumItalic.ttf in Resources */,
-				9318C563698B4481A5CF2A61 /* Roboto-Thin.ttf in Resources */,
-				C7646D543ADC4ADAA7DB9671 /* Roboto-ThinItalic.ttf in Resources */,
-				A481F23EFD124D0F930D8353 /* Poppins-Black.ttf in Resources */,
-				8C3B5E72EB2D4D2E8D4A91C1 /* Poppins-BlackItalic.ttf in Resources */,
-				7592993280B0421B8D77CAC0 /* Poppins-Bold.ttf in Resources */,
-				1294BA6A97A245208852C637 /* Poppins-BoldItalic.ttf in Resources */,
-				4792B31D93464B44879735B3 /* Poppins-ExtraBold.ttf in Resources */,
-				12E32C8898424243B1A55883 /* Poppins-ExtraBoldItalic.ttf in Resources */,
-				F069D58335DC45BE92852488 /* Poppins-ExtraLight.ttf in Resources */,
-				83FAB3C3648840959356925A /* Poppins-ExtraLightItalic.ttf in Resources */,
-				2CA7686D31C14B55B1985D3C /* Poppins-Italic.ttf in Resources */,
-				729CD7053FD2455AAD582A73 /* Poppins-Light.ttf in Resources */,
-				60DFD0BFE7F640138BD81935 /* Poppins-LightItalic.ttf in Resources */,
-				0A5551B2E47C46D2877D9F92 /* Poppins-Medium.ttf in Resources */,
-				0BDA7FE938534BFCBF2213EE /* Poppins-MediumItalic.ttf in Resources */,
-				23B5EECC4BE14314B0BBA080 /* Poppins-Regular.ttf in Resources */,
-				E9926E4BEE4D4AEE95F53EBD /* Poppins-SemiBold.ttf in Resources */,
-				ED615FB1F82A4B7E98518C97 /* Poppins-SemiBoldItalic.ttf in Resources */,
-				31236E20DFFA443594C105BA /* Poppins-Thin.ttf in Resources */,
-				DBB80F0F51E3426AB4078E8C /* Poppins-ThinItalic.ttf in Resources */,
-				51A0ED268CB441BA8015CAA0 /* FjallaOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,29 +265,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		4D20238254AC23DDE2EDA8F6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TeslaApp-TeslaAppTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9F2D37F68EFAB0F0F00E00BD /* [CP] Check Pods Manifest.lock */ = {
+		32A8AA0150D85E3E773CECE1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -434,41 +287,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D12DC561DEC44C29C9DC4A69 /* [CP] Copy Pods Resources */ = {
+		39AE7EC55113C67463438B28 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TeslaApp-TeslaAppTests/Pods-TeslaApp-TeslaAppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TeslaApp/Pods-TeslaApp-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TeslaApp-TeslaAppTests/Pods-TeslaApp-TeslaAppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TeslaApp/Pods-TeslaApp-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeslaApp-TeslaAppTests/Pods-TeslaApp-TeslaAppTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeslaApp/Pods-TeslaApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DAD7C4A398E77D8288A56627 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TeslaApp-TeslaAppTests/Pods-TeslaApp-TeslaAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TeslaApp-TeslaAppTests/Pods-TeslaApp-TeslaAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeslaApp-TeslaAppTests/Pods-TeslaApp-TeslaAppTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DF24AEB43D166E88C54B501B /* [CP] Embed Pods Frameworks */ = {
+		4A1304B6EFE467CEA6202AA2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -485,21 +321,60 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeslaApp/Pods-TeslaApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E1435D64277CC3C41463FBBC /* [CP] Copy Pods Resources */ = {
+		5040407A835B7C96EA7F914F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TeslaApp/Pods-TeslaApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TeslaApp-TeslaAppTests/Pods-TeslaApp-TeslaAppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TeslaApp/Pods-TeslaApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TeslaApp-TeslaAppTests/Pods-TeslaApp-TeslaAppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeslaApp/Pods-TeslaApp-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeslaApp-TeslaAppTests/Pods-TeslaApp-TeslaAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65CD34DBC13F7B977A72D1F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TeslaApp-TeslaAppTests/Pods-TeslaApp-TeslaAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TeslaApp-TeslaAppTests/Pods-TeslaApp-TeslaAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeslaApp-TeslaAppTests/Pods-TeslaApp-TeslaAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBE18988DCD926CE7D66017D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TeslaApp-TeslaAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -554,7 +429,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D89BABA29F183771D4974912 /* Pods-TeslaApp-TeslaAppTests.debug.xcconfig */;
+			baseConfigurationReference = 98393C9D3C1428AB1D102AC1 /* Pods-TeslaApp-TeslaAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -562,7 +437,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = TeslaAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -581,12 +456,12 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DF480A14DBE375F855C1BA4 /* Pods-TeslaApp-TeslaAppTests.release.xcconfig */;
+			baseConfigurationReference = A469AB83F99B21A59A80D262 /* Pods-TeslaApp-TeslaAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = TeslaAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -605,7 +480,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95EF501E7FD6FBA1F6E9222F /* Pods-TeslaApp.debug.xcconfig */;
+			baseConfigurationReference = 5B6A97B9816E792232E4F52A /* Pods-TeslaApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -631,7 +506,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D2CC79A3B4DCD325F0045DF /* Pods-TeslaApp.release.xcconfig */;
+			baseConfigurationReference = 360AF9EDE9D7832AE42B715E /* Pods-TeslaApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -702,7 +577,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -760,7 +635,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
