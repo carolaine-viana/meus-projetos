@@ -1,5 +1,16 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, Pressable, SafeAreaView} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Pressable,
+  SafeAreaView,
+  TouchableOpacity,
+  Text,
+  Modal,
+  Button,
+  Image,
+  ImageBackground,
+} from 'react-native';
 
 import Card from '../../components/TinderCard/index';
 import users from '../../assets/data/users';
@@ -11,9 +22,11 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MatchesScreen from '../MatchesScreen';
+import closeModalImage from '../../assets/images/close.png';
 
-const HomeScreen = navigation => {
+function HomeScreen({navigation}) {
   const [activeScreen, setActiveScreen] = useState('HOME');
+  const [modalVisible, setModalVisible] = useState(true);
   const color = '#b5b5b5';
   const activeColor = '#F75C6B';
 
@@ -53,13 +66,71 @@ const HomeScreen = navigation => {
             />
           </Pressable>
 
-          <Pressable onPress={() => setActiveScreen('PROFILE')}>
+          <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
             <FontAwesome
               name="user"
               size={30}
               color={activeScreen === 'PROFILE' ? activeColor : color}
             />
+          </TouchableOpacity>
+        </View>
+
+        {/* <View style={styles.containerFeatureButton}>
+          <Pressable
+            onPress={() => setModalVisible(true)}
+            style={styles.featureButton}>
+            <Text
+              style={{
+                color: 'black',
+                fontSize: 15,
+                textTransform: 'uppercase',
+              }}>
+            </Text>
           </Pressable>
+        </View> */}
+
+        <View style={styles.modalContainer}>
+          <Modal
+            animationType="slide"
+            transparent={true}
+            visible={modalVisible}
+            onRequestClose={() => {
+              console.warn('Modal has been closed.');
+              // setModalVisible(!modalVisible);
+            }}>
+            <View style={styles.modalView}>
+              <Pressable onPress={() => setModalVisible(false)}>
+                <ImageBackground
+                  source={require('../../assets/images/close.png')}
+                  style={{width: 30, height: 30, top: '300%', padding: 20}}
+                />
+              </Pressable>
+              <Text
+                style={{
+                  fontSize: 20,
+                  bottom: 50,
+                  textTransform: 'uppercase',
+                  fontWeight: 'bold',
+                }}>
+                Welcome to TinderClone
+              </Text>
+              <Text style={{paddingHorizontal: 20, bottom: 40, fontSize: 15}}>
+                So you can start using and getting matches, please, finish your
+                setup.
+              </Text>
+              <Pressable onPress={() => navigation.navigate('Profile')}>
+                <Text
+                  style={{
+                    color: 'blue',
+                    fontSize: 18,
+                    textTransform: 'uppercase',
+                    bottom: 5,
+                  }}>
+                  Click here
+                </Text>
+              </Pressable>
+            </View>
+          </Modal>
         </View>
 
         <AnimatedStack
@@ -90,11 +161,9 @@ const HomeScreen = navigation => {
           </View>
         </View>
       </View>
-
-      
     </SafeAreaView>
   );
-};
+}
 
 const styles = StyleSheet.create({
   root: {
@@ -130,6 +199,38 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 50,
   },
+  modalContainer: {
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modalView: {
+    margin: 30,
+    backgroundColor: '#e3e5e7', //cor de fundo do modal
+    borderRadius: 20,
+    top: '20%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '80%',
+    height: '30%',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+
+  closeModal: {
+    marginLeft: '68%',
+    width: 30,
+    height: 30,
+    resizeMode: 'cover',
+  },
+  
 });
 
 export default HomeScreen;

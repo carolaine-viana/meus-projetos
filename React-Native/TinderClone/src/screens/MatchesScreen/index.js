@@ -3,6 +3,8 @@ import {View, Text, StyleSheet, SafeAreaView, Image} from 'react-native';
 import users from '../../assets/data/users';
 
 const MatchesScreen = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+
   return (
     <SafeAreaView style={styles.root}>
       <View style={styles.container}>

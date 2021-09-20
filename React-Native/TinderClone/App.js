@@ -26,6 +26,7 @@ import config from './src/aws-exports';
 Amplify.configure(config);
 import {withAuthenticator} from 'aws-amplify-react-native';
 import {Auth} from 'aws-amplify';
+import ProfileScreen from './src/screens/ProfileScreen';
 
 function App() {
   const Stack = createStackNavigator();
@@ -33,15 +34,7 @@ function App() {
   return (
     <>
       <NavigationContainer style={styles.root}>
-        <Stack.Navigator initialRouteName="LoginPage">
-          <Stack.Screen
-            name="LoginPage"
-            component={LoginPage}
-            options={{
-              headerShown: false
-            }}
-          />
-
+        <Stack.Navigator initialRouteName="HomeScreen">
           <Stack.Screen
             name="HomeScreen"
             component={HomeScreen}
@@ -50,21 +43,23 @@ function App() {
             }}
           />
 
-        <Stack.Screen
-            name="signUp"
-            component={signUp}
-          />
+          <Stack.Screen name="signUp" component={signUp} />
 
-<Stack.Screen
-            name="ConfirmSignUp"
-            component={ConfirmSignUp}
-          />
+          <Stack.Screen name="ConfirmSignUp" component={ConfirmSignUp} />
+
+          <Stack.Screen
+            name="Profile"
+            component={ProfileScreen}
+            options={{
+              headerShown: true,
+            }}
+            />
+
         </Stack.Navigator>
       </NavigationContainer>
     </>
   );
 }
-
 
 const styles = StyleSheet.create({
   root: {
@@ -86,4 +81,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default withAuthenticator(App)
