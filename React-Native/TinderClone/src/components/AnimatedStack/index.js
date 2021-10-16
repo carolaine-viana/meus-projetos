@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, StyleSheet, useWindowDimensions} from 'react-native';
+import {View, StyleSheet, useWindowDimensions, Text} from 'react-native';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -17,7 +17,7 @@ const ROTATION = 60; //rotacao maxima
 const SWIPE_VELOCITY = 800; //se eu soltar o card antes do fim, ele tem que voltar pro meio.
 
 const AnimatedStack = props => {
-  const {data, renderItem, onSwipeRight, onSwipeLeft} = props;
+  const {data, renderItem, onSwipeRight, onSwipeLeft, setCurrentUser} = props;
 
   const [currentIndex, setCurrentIndex] = useState(0); //card atual
   const [nextIndex, setNextIndex] = useState(currentIndex + 1); //proximo cad
@@ -77,6 +77,11 @@ const AnimatedStack = props => {
     opacity: interpolate(translateX.value, [0, -hiddenTranslateX], [0.3, 10]),
   }));
 
+  const onSwipeLeftRight = (args, isRight) => {
+    const onSwipe = isRight ? onSwipeRight : onSwipeLeft; //determinar qual func chamar depend do lado
+    onSwipe(args);
+  };
+
   const gestureHandler = useAnimatedGestureHandler({
     //sempre que iniciar o evento de touch
     onStart: (_, context) => {
@@ -101,8 +106,8 @@ const AnimatedStack = props => {
         {},
         () => runOnJS(setCurrentIndex)(currentIndex + 1), //sempre que a animacao acabar podemos chmaar o index
       );
-      const onSwipe = event.velocityX > 0 ? onSwipeRight : onSwipeLeft; //determinar qual func chamar depend do lado
-      onSwipe && runOnJS(onSwipe)(currentProfile)
+      const onSwipe = event.velocityX > 0 ? onSwipeRight : onSwipeLeft;
+      onSwipe && runOnJS(onSwipe)();
     },
   });
 
@@ -110,6 +115,10 @@ const AnimatedStack = props => {
     translateX.value = 0;
     setNextIndex(currentIndex + 1);
   }, [currentIndex, translateX]); //vai ser chamado toda vez que o current index muda
+
+  useEffect(() => {
+    setCurrentUser(currentProfile);
+  }, [currentProfile, setCurrentUser]);
 
   return (
     //card atras
@@ -123,7 +132,7 @@ const AnimatedStack = props => {
         </View>
       )}
 
-      {currentProfile && (
+      {currentProfile ? (
         <PanGestureHandler onGestureEvent={gestureHandler}>
           <Animated.View style={[styles.animatedCard, cardStyle]}>
             <Animated.Image
@@ -139,12 +148,11 @@ const AnimatedStack = props => {
             {renderItem({item: currentProfile})}
           </Animated.View>
         </PanGestureHandler>
+      ) : (
+        <View>
+          <Text>No more users.</Text>
+        </View>
       )}
-
-      {/* <Pressable
-        onPress={() => (translateX.value = withSpring(Math.random()))}>
-        <Text>Change Value</Text>
-      </Pressable> */}
     </View>
   );
 };

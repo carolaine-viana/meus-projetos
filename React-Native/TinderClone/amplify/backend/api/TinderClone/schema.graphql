@@ -1,13 +1,16 @@
-type Match @model @auth(rules: [{allow: public}]) {
-  id: ID!
-  User1: User @connection
-  User2: User @connection
-}
-
 enum Genders {
   MALE
   FEMALE
   OTHER
+}
+
+type Match @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  User1: User @connection(fields: ["user1ID"])
+  user1ID: String!
+  User2ID: String
+  User2: User @connection(fields: ["User2ID"])
+  isMatch: Boolean!
 }
 
 type User @model @auth(rules: [{allow: public}]) {
@@ -19,4 +22,4 @@ type User @model @auth(rules: [{allow: public}]) {
   lookingFor: Genders!
   sub: String!
 }
-  
+ 

@@ -10,9 +10,10 @@ import {
 } from 'react-native';
 import {Picker} from '@react-native-picker/picker';
 import {Auth, DataStore} from 'aws-amplify';
-import {User} from '../../models/';
+import {User, Match} from '../../models/';
 import Amplify from 'aws-amplify';
 import config from '../../../src/aws-exports';
+import styles from './styles';
 Amplify.configure(config);
 
 const ProfileScreen = () => {
@@ -21,7 +22,7 @@ const ProfileScreen = () => {
   const [bio, setBio] = useState('');
   const [gender, setGender] = useState();
   const [lookingFor, setLookingFor] = useState();
-
+  
 
   useEffect(() => {
     //vai mostrar nosso usuario atual pelo sub (id da aws)
@@ -32,9 +33,9 @@ const ProfileScreen = () => {
 
       const dbUsers = await DataStore.query(
         User,
-        u => u.sub === user.attributes.sub,
-      );
-      if (dbUsers.length < 0) {
+        u => u.sub('eq', user.attributes.sub));
+
+      if (!dbUsers || dbUsers.length === 0) {
         //nao ha usuario no database
         return;
       }
@@ -82,8 +83,8 @@ const ProfileScreen = () => {
           bio,
           gender,
           lookingFor,
-          image:
-            'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim1.JPG',
+          //imagem padrao a ser salva
+          image: 'https://avatars.githubusercontent.com/u/65136543?v=4',
         });
         console.warn(newUser);
         await DataStore.save(newUser);
@@ -92,13 +93,13 @@ const ProfileScreen = () => {
         console.warn('❌ Error in...', error);
       }
     }
-
     Alert.alert('User saved sucessfully ✅ ');
   }
 
   return (
     <SafeAreaView style={styles.root}>
       <View style={styles.container}>
+        <Text style={styles.subText}>Name</Text>
         <TextInput
           style={styles.input}
           placeholder="Name"
@@ -106,6 +107,7 @@ const ProfileScreen = () => {
           onChangeText={text => setName(text)}
         />
 
+        <Text style={styles.subText}>Bio</Text>
         <TextInput
           style={styles.input}
           placeholder="Bio"
@@ -115,7 +117,7 @@ const ProfileScreen = () => {
           onChangeText={text => setBio(text)}
         />
 
-        <Text>Gender</Text>
+        <Text style={styles.subText}>Gender</Text>
         <Picker
           label="Gender"
           selectedValue={gender}
@@ -125,7 +127,7 @@ const ProfileScreen = () => {
           <Picker.Item label="Other" value="OTHER" />
         </Picker>
 
-        <Text>Looking For</Text>
+        <Text style={styles.subText}>Looking For</Text>
         <Picker
           label="Looking For"
           selectedValue={lookingFor}
@@ -147,30 +149,4 @@ const ProfileScreen = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  root: {
-    width: '100%',
-    flex: 1,
-    padding: 10,
-  },
-
-  container: {
-    padding: 10,
-  },
-
-  button: {
-    backgroundColor: '#F63A6E',
-    height: 35,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 20,
-    margin: 10,
-  },
-
-  input: {
-    margin: 10,
-    borderBottomColor: 'lightgray',
-    borderBottomWidth: 1,
-  },
-});
 export default ProfileScreen;

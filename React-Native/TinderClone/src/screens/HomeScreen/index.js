@@ -1,28 +1,36 @@
-import React, {useState} from 'react';
+//imports
+import React, {useState, useEffect} from 'react';
 import {
   View,
-  StyleSheet,
   Pressable,
   SafeAreaView,
   TouchableOpacity,
   Text,
   Modal,
-  Button,
-  Image,
   ImageBackground,
 } from 'react-native';
 
+//pages
 import Card from '../../components/TinderCard/index';
-import users from '../../assets/data/users';
 import AnimatedStack from '../../components/AnimatedStack/index';
+import MatchesScreen from '../MatchesScreen';
 
+//imagens
+import closeModalImage from '../../assets/images/close.png';
+
+//css
+import styles from './styles';
+
+//vector icons
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import MatchesScreen from '../MatchesScreen';
-import closeModalImage from '../../assets/images/close.png';
+
+//aws
+import {DataStore, Auth} from 'aws-amplify';
+import {User, Match} from '../../models';
 
 function HomeScreen({navigation}) {
   const [activeScreen, setActiveScreen] = useState('HOME');
@@ -30,17 +38,90 @@ function HomeScreen({navigation}) {
   const color = '#b5b5b5';
   const activeColor = '#F75C6B';
 
-  const onSwipeLeft = user => {
-    console.warn('swipe left', user.name);
-  };
+  const [users, setUsers] = useState([]);
+  const [currentUser, setCurrentUser] = useState(null);
+  const [me, setMe] = useState(null);
 
-  const onSwipeRight = user => {
-    console.warn('swipe right', user.name);
+  useEffect(() => {
+    //vai mostrar nosso usuario atual pelo sub (id da aws)
+
+    const getCurrentUser = async () => {
+      //vai verificar se ja existe um usario com aquele id para nao criar outro
+      const user = await Auth.currentAuthenticatedUser();
+
+      const dbUsers = await DataStore.query(
+        User,
+        u => u.sub === user.attributes.sub,
+      );
+      if (dbUsers.length < 0) {
+        //nao ha usuario no database
+        return;
+      }
+
+      //se houver
+      setMe(dbUsers[0]);
+    };
+    getCurrentUser();
+  }, []);
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      const fetchUsers = await DataStore.query(User); //ta pegando os usuarios
+      console.warn(fetchUsers);
+      setUsers(fetchUsers);
+    };
+    fetchUsers();
+  }, []);
+
+  const onSwipeLeft = () => {
+    if (!currentUser || !me) {
+      return;
+    }
+    console.warn('swipe left', currentUser.name);
+  };
+  const onSwipeRight = async () => {
+    if (!currentUser || !me) {
+      return;
+    }
+
+    const myMatches = await DataStore.query(Match, match =>
+      match.user1ID('eq', me.id).user1ID('eq', currentUser.id),
+    );
+
+    if (myMatches.length > 0) {
+      console.warn('you already swiped right to this user');
+      return;
+    }
+
+    //verificando se 
+    const hisMatches = await DataStore.query(Match, match =>
+      match.user1ID('aq', currentUser.id).User2ID('aq', me.id),
+    );
+
+    if (hisMatches.length > 0) {
+      console.log('Yah! this is a new match')
+      const hisMatch = hisMatches[0]
+      DataStore.save(Match.copyOf(hisMatch, updated => (updated.isMatch = true)),
+      );
+      return;
+    }
+
+    console.warn('sending him a match request!')
+
+    DataStore.save(
+      new Match({
+        user1ID: me.id,
+        User2ID: currentUser.id,
+        isMatch: false,
+      }),
+    );
   };
 
   return (
     <SafeAreaView style={styles.root}>
       <View style={styles.pageContainer}>
+        {/* ===================== ICONS ACIMA ================================= */}
+
         <View style={styles.topNavigation}>
           <Pressable onPress={() => setActiveScreen('HOME')}>
             <Fontisto
@@ -58,7 +139,7 @@ function HomeScreen({navigation}) {
             />
           </Pressable>
 
-          <Pressable onPress={() => setActiveScreen('CHAT')}>
+          <Pressable onPress={() => navigation.navigate('MatchesScreen')}>
             <Ionicons
               name="ios-chatbubbles"
               size={30}
@@ -75,29 +156,25 @@ function HomeScreen({navigation}) {
           </TouchableOpacity>
         </View>
 
-        {/* <View style={styles.containerFeatureButton}>
-          <Pressable
-            onPress={() => setModalVisible(true)}
-            style={styles.featureButton}>
-            <Text
-              style={{
-                color: 'black',
-                fontSize: 15,
-                textTransform: 'uppercase',
-              }}>
-            </Text>
-          </Pressable>
-        </View> */}
+        {/* ===================== ANIMTED STACK ================================= */}
 
+        <AnimatedStack
+          data={users}
+          renderItem={({item}) => <Card user={item} />} //criou uma funcao com um parametro chamado item
+          setCurrentUser={setCurrentUser}
+          onSwipeLeft={onSwipeLeft} //aqui vai dizer se vc ta movendo pra esquerda
+          onSwipeRight={onSwipeRight}
+        />
+
+        {/* ===================== M O D A L ================================= */}
+
+        <View style={styles.containerFeatureButton}></View>
         <View style={styles.modalContainer}>
           <Modal
             animationType="slide"
             transparent={true}
-            visible={modalVisible}
-            onRequestClose={() => {
-              console.warn('Modal has been closed.');
-              // setModalVisible(!modalVisible);
-            }}>
+            visible={modalVisible} //variavel pra desligar o modal da tela
+          >
             <View style={styles.modalView}>
               <Pressable onPress={() => setModalVisible(false)}>
                 <ImageBackground
@@ -121,7 +198,7 @@ function HomeScreen({navigation}) {
               <Pressable onPress={() => navigation.navigate('Profile')}>
                 <Text
                   style={{
-                    color: 'blue',
+                    color: 'red',
                     fontSize: 18,
                     textTransform: 'uppercase',
                     bottom: 5,
@@ -133,12 +210,8 @@ function HomeScreen({navigation}) {
           </Modal>
         </View>
 
-        <AnimatedStack
-          data={users}
-          renderItem={({item}) => <Card user={item} />} //criou uma funcao com um parametro chamado item
-          onSwipeLeft={onSwipeLeft}
-          onSwipeRight={onSwipeRight}
-        />
+        {/* ===================== ICONS ABAIXO ================================= */}
+
         <View style={styles.icons}>
           <View style={styles.button}>
             <FontAwesome name="undo" size={30} color="#FBD88B" />
@@ -164,73 +237,5 @@ function HomeScreen({navigation}) {
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-  },
-  pageContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex: 1,
-    width: '100%',
-    backgroundColor: '#ededed',
-  },
-  icons: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    width: '100%',
-    padding: 10,
-  },
-  button: {
-    backgroundColor: 'white',
-    padding: 10,
-    borderRadius: 50,
-    width: 50,
-    height: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  topNavigation: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '100%',
-    height: 50,
-    alignItems: 'center',
-    paddingHorizontal: 50,
-  },
-  modalContainer: {
-    width: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  modalView: {
-    margin: 30,
-    backgroundColor: '#e3e5e7', //cor de fundo do modal
-    borderRadius: 20,
-    top: '20%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '80%',
-    height: '30%',
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
-
-  closeModal: {
-    marginLeft: '68%',
-    width: 30,
-    height: 30,
-    resizeMode: 'cover',
-  },
-  
-});
 
 export default HomeScreen;

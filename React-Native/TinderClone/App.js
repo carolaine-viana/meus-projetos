@@ -1,32 +1,29 @@
 import React, {useEffect, useState} from 'react';
+
+//pages
 import HomeScreen from './src/screens/HomeScreen/index';
 import MatchesScreen from './src/screens/MatchesScreen';
 import LoginPage from './src/screens/LoginPage';
 import signUp from './src/screens/signUp';
 import ConfirmSignUp from './src/screens/ConfirmSignUp';
+import ProfileScreen from './src/screens/ProfileScreen';
 
-import {
-  View,
-  StyleSheet,
-  Pressable,
-  SafeAreaView,
-  Button,
-  TextInput,
-  Text,
-} from 'react-native';
-import Fontisto from 'react-native-vector-icons/Fontisto';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
+//css
+import {StyleSheet} from 'react-native';
+
+//navigation
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
+//aws
 import Amplify from 'aws-amplify';
 import config from './src/aws-exports';
-Amplify.configure(config);
+Amplify.configure({...config,
+    Analytics: {
+      disabled: true,
+    }
+});
 import {withAuthenticator} from 'aws-amplify-react-native';
-import {Auth} from 'aws-amplify';
-import ProfileScreen from './src/screens/ProfileScreen';
 
 function App() {
   const Stack = createStackNavigator();
@@ -43,18 +40,37 @@ function App() {
             }}
           />
 
-          <Stack.Screen name="signUp" component={signUp} />
+          <Stack.Screen
+            name="signUp"
+            component={signUp}
+            options={{
+              headerShown: false,
+            }}
+          />
 
-          <Stack.Screen name="ConfirmSignUp" component={ConfirmSignUp} />
+          <Stack.Screen
+            name="ConfirmSignUp"
+            component={ConfirmSignUp}
+            options={{
+              headerShown: false,
+            }}
+          />
 
           <Stack.Screen
             name="Profile"
             component={ProfileScreen}
             options={{
-              headerShown: true,
+              headerShown: false,
             }}
-            />
+          />
 
+          <Stack.Screen
+            name="MatchesScreen"
+            component={MatchesScreen}
+            options={{
+              headerShown: false,
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
@@ -81,4 +97,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default withAuthenticator(App)
+export default withAuthenticator(App);

@@ -17,6 +17,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import { whileStatement } from '@babel/types';
 import logo from '../../assets/images/logo.png';
 import SignUp from '../signUp/index';
+import styles from './styles';
 
 function LoginPage ({navigation}) {
   const color = '#b5b5b5';
@@ -110,49 +111,49 @@ function LoginPage ({navigation}) {
   );
 };
 
-const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-    backgroundColor: '#fa4f6b',
-  },
+// const styles = StyleSheet.create({
+//   root: {
+//     flex: 1,
+//     backgroundColor: '#fa4f6b',
+//   },
 
-  containerInput: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingHorizontal: 20,
-    marginTop: 50,
-    color: 'red',
-  },
+//   containerInput: {
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//     paddingHorizontal: 20,
+//     marginTop: 50,
+//     color: 'red',
+//   },
 
-  TextInput: {
-    width: '100%',
-    height: 40,
-    borderRadius: 10,
-    paddingHorizontal: 30,
-    fontWeight: 'bold',
-    fontSize: 20,
-    textAlign: 'center',
-    backgroundColor: 'white',
-    marginBottom: 10,
-  },
+//   TextInput: {
+//     width: '100%',
+//     height: 40,
+//     borderRadius: 10,
+//     paddingHorizontal: 30,
+//     fontWeight: 'bold',
+//     fontSize: 20,
+//     textAlign: 'center',
+//     backgroundColor: 'white',
+//     marginBottom: 10,
+//   },
 
-  Button: {
-    width: '50%',
-    backgroundColor: 'white',
-    borderWidth: 1,
-    borderColor: 'white',
-    marginLeft: '25%',
-    borderRadius: 10,
-  },
+//   Button: {
+//     width: '50%',
+//     backgroundColor: 'white',
+//     borderWidth: 1,
+//     borderColor: 'white',
+//     marginLeft: '25%',
+//     borderRadius: 10,
+//   },
 
-  descriptionContainer: {
-      padding: 30,
-  },
+//   descriptionContainer: {
+//       padding: 30,
+//   },
 
-  description: {
-    color: "white",
-    fontSize: 10,
-  }
+//   description: {
+//     color: "white",
+//     fontSize: 10,
+//   }
 
-});
+// });
 export default LoginPage;
