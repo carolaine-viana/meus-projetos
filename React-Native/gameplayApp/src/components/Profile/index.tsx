@@ -10,12 +10,18 @@ export function Profile() {
       <Avatar urlImage="https://github.com/carolaine-viana.png"/>
       <View>
         <View style={styles.user}>
-          <Text style={styles.greeting}>Olá,</Text>
+          <Text style={styles.greeting}>
+            Olá,
+          </Text>
 
-          <Text style={styles.username}>Carolaine</Text>
+          <Text style={styles.username}>
+            Carolaine
+          </Text>
         </View>
 
-        <Text style={styles.message}>Hoje é dia de vitória.</Text>
+        <Text style={styles.message}>
+          Hoje é dia de vitória.
+        </Text>
       </View>
     </SafeAreaView>
   );

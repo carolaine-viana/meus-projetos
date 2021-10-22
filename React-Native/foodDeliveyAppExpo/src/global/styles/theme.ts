@@ -1,0 +1,27 @@
+export const theme = {
+  colors: {
+    ink01: "#191D21",
+    ink02: "#656F77",
+    ink03: "#ACB8C2",
+    ink04: "#CDD9E3",
+    ink05: "#E8EEF3",
+    ink06: "#FFFFFF",
+    accentblue: "#C9EAFD",
+    accentgreen: "#D0F1EB",
+    accentpurple: "#DED2F9",
+    accentorange: "#F5D4C1",
+    accentpink: "#FDC9D2",
+    accentyellow: "#FDEBC9",
+    utilityActive: "#1814E4",
+    utilitySucess: "#23E9B4",
+    utilityInfo: "#91D7E0",
+    utilityWarning: "#FFAC4B",
+    utilityDanger: "#FF5A5A",
+  },
+  fonts: {
+    title700: "Raleway_700Bold",
+    title500: "Raleway_500Medium",
+    text400: "Raleway_400Regular",
+    text500: "Raleway_500Regular",
+  },
+};

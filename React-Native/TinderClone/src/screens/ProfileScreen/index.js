@@ -28,12 +28,12 @@ const ProfileScreen = () => {
     //vai mostrar nosso usuario atual pelo sub (id da aws)
 
     const getCurrentUser = async () => {
-      //vai verificar se ja existe um usario com aquele id para nao criar outro
-      const user = await Auth.currentAuthenticatedUser();
+      //vai verificar se ja existe outro usario com aquele id parecido
+      const authUser = await Auth.currentAuthenticatedUser();
 
       const dbUsers = await DataStore.query(
         User,
-        u => u.sub('eq', user.attributes.sub));
+        u => u.sub('eq', authUser.attributes.sub));
 
       if (!dbUsers || dbUsers.length === 0) {
         //nao ha usuario no database
@@ -96,6 +96,11 @@ const ProfileScreen = () => {
     Alert.alert('User saved sucessfully ✅ ');
   }
 
+const signOut = async () => {
+  await DataStore.clear()
+  Auth.signOut()
+}
+
   return (
     <SafeAreaView style={styles.root}>
       <View style={styles.container}>
@@ -141,7 +146,7 @@ const ProfileScreen = () => {
           <Text>Save</Text>
         </Pressable>
 
-        <Pressable onPress={() => Auth.signOut()} style={styles.button}>
+        <Pressable onPress={signOut} style={styles.button}>
           <Text>SignOut</Text>
         </Pressable>
       </View>
