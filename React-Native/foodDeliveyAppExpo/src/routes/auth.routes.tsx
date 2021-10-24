@@ -16,6 +16,7 @@ import { Orders } from "../views/Orders";
 import { Profile } from "../views/Profile";
 import { Feed } from "../views/Feed";
 import { useNavigation } from "@react-navigation/native";
+import { RestaurantProfile } from "../views/RestaurantProfile";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -74,6 +75,20 @@ export default function authRoutes() {
         <Tab.Screen
           name="Profile"
           component={Profile}
+          options={{
+            tabBarIcon: ({ focused }) => (
+              <FontAwesome5
+                name="user-circle"
+                size={30}
+                color={focused ? "#fff" : "#ddd"}
+              />
+            ),
+          }}
+        />
+
+        <Tab.Screen
+          name="RestaurantProfile"
+          component={RestaurantProfile}
           options={{
             tabBarIcon: ({ focused }) => (
               <FontAwesome5

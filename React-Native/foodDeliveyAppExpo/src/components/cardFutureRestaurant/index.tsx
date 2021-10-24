@@ -1,7 +1,16 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Image } from "react-native";
 import { styles } from "./styles";
+import chicken from '../../assets/foodImage/chicken.png';
 
-export function cardFutureRestaurant() {
-  return <View style={styles.container}></View>;
+export const CardFutureRestaurant = () => {
+  return(
+    <View style={styles.container}>
+      <View style={styles.card}>
+        <Image
+          source={chicken}
+        />
+      </View>
+    </View>
+  )
 }

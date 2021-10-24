@@ -4,7 +4,7 @@ import { theme } from "../../global/styles/theme";
 export const styles = StyleSheet.create({
   container: {
     width: 200,
-    height: 300,
+    height: 280,
     marginRight: 10,
     borderRadius: 30,
     backgroundColor: theme.colors.accentorange,
@@ -22,10 +22,12 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 20,
+    marginTop: 10,
   },
   info: {
     flexDirection: "row",
     justifyContent: "center",
+    padding: 30,
   },
   subtitle: {
     fontFamily: theme.fonts.text400,

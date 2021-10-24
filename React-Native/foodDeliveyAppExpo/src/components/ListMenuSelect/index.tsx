@@ -7,13 +7,22 @@ import { CategoryCard } from "../CategoryCard";
 
 import { styles } from "./styles";
 
-export function ListMenuSelect() {
+type Props = {
+  categorySelected: string;
+  setCategory: (categoryId: string) => void;
+};
+
+export function ListMenuSelect({categorySelected, setCategory}) {
   return (
     <View style={styles.container}>
       <ScrollView>
         <FlatList
           data={categories}
-          renderItem={({ item }) => <CategoryCard {...item} />}
+          renderItem={({ item }) =>(
+            <CategoryCard {...item}
+              onPress={() => setCategory(item.title, item.icon)}
+          />
+          )}
           horizontal={true}
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
