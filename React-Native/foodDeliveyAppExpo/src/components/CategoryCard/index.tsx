@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, ImageSourcePropType } from "react-native";
+import { View, Image, ImageSourcePropType } from "react-native";
 import { styles } from "./styles";
 import { RectButton, RectButtonProps } from "react-native-gesture-handler";
 
@@ -22,7 +22,7 @@ export const CategoryCard = ({ id, title, icon, ...rest }: Props) => {
             : styles.cardContainOpt3
         }
       >
-        <Image source={icon} />
+       <Image source={icon} />
       </RectButton>
     </View>
   );
