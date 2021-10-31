@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   View,
   Text,
@@ -8,21 +8,24 @@ import {
   TextInput,
   Alert,
 } from 'react-native';
-import {Picker} from '@react-native-picker/picker';
-import {Auth, DataStore} from 'aws-amplify';
-import {User, Match} from '../../models/';
+import { Picker } from '@react-native-picker/picker';
+import { Auth, DataStore } from 'aws-amplify';
+import { User, Match } from '../../models/';
 import Amplify from 'aws-amplify';
 import config from '../../../src/aws-exports';
 import styles from './styles';
+import Background from '../../components/Background';
+import { AmplifyGreetings } from '@aws-amplify/ui-react';
+import { NavigationContainer } from '@react-navigation/native';
 Amplify.configure(config);
 
-const ProfileScreen = () => {
+const ProfileScreen = ({navigation}) => {
   const [user, setUser] = useState(null);
   const [name, setName] = useState('');
   const [bio, setBio] = useState('');
   const [gender, setGender] = useState();
   const [lookingFor, setLookingFor] = useState();
-  
+
 
   useEffect(() => {
     //vai mostrar nosso usuario atual pelo sub (id da aws)
@@ -96,61 +99,66 @@ const ProfileScreen = () => {
     Alert.alert('User saved sucessfully ✅ ');
   }
 
-const signOut = async () => {
-  await DataStore.clear()
-  Auth.signOut()
-}
+  const signOut = async () => {
+    await DataStore.clear()
+    Auth.signOut()
+  }
 
   return (
-    <SafeAreaView style={styles.root}>
-      <View style={styles.container}>
-        <Text style={styles.subText}>Name</Text>
-        <TextInput
-          style={styles.input}
-          placeholder="Name"
-          value={name}
-          onChangeText={text => setName(text)}
-        />
+    <Background>
+      <SafeAreaView>
+        <View style={styles.container}>
+          <Text style={styles.subText}>Name</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Name"
+            value={name}
+            onChangeText={text => setName(text)}
+          />
 
-        <Text style={styles.subText}>Bio</Text>
-        <TextInput
-          style={styles.input}
-          placeholder="Bio"
-          multiline //pular de linha
-          numberOfLines={3} //3 linhas
-          value={bio}
-          onChangeText={text => setBio(text)}
-        />
+          <Text style={styles.subText}>Bio</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Bio"
+            multiline //pular de linha
+            numberOfLines={3} //3 linhas
+            value={bio}
+            onChangeText={text => setBio(text)}
+          />
 
-        <Text style={styles.subText}>Gender</Text>
-        <Picker
-          label="Gender"
-          selectedValue={gender}
-          onValueChange={itemValue => setGender(itemValue)}>
-          <Picker.Item label="Male" value="MALE" />
-          <Picker.Item label="Female" value="FEMALE" />
-          <Picker.Item label="Other" value="OTHER" />
-        </Picker>
+          <Text style={styles.subText}>Gender</Text>
+          <Picker
+            label="Gender"
+            selectedValue={gender}
+            onValueChange={itemValue => setGender(itemValue)}>
+            <Picker.Item label="Male" value="MALE" />
+            <Picker.Item label="Female" value="FEMALE" />
+            <Picker.Item label="Other" value="OTHER" />
+          </Picker>
 
-        <Text style={styles.subText}>Looking For</Text>
-        <Picker
-          label="Looking For"
-          selectedValue={lookingFor}
-          onValueChange={itemValue => setLookingFor(itemValue)}>
-          <Picker.Item label="Male" value="MALE" />
-          <Picker.Item label="Female" value="FEMALE" />
-          <Picker.Item label="Other" value="OTHER" />
-        </Picker>
+          <Text style={styles.subText}>Looking For</Text>
+          <Picker
+            label="Looking For"
+            selectedValue={lookingFor}
+            onValueChange={itemValue => setLookingFor(itemValue)}>
+            <Picker.Item label="Male" value="MALE" />
+            <Picker.Item label="Female" value="FEMALE" />
+            <Picker.Item label="Other" value="OTHER" />
+          </Picker>
 
-        <Pressable onPress={save} style={styles.button}>
-          <Text>Save</Text>
-        </Pressable>
+          <Pressable onPress={save} style={styles.button}>
+            <Text>Save</Text>
+          </Pressable>
 
-        <Pressable onPress={signOut} style={styles.button}>
-          <Text>SignOut</Text>
-        </Pressable>
-      </View>
-    </SafeAreaView>
+            <Pressable
+              onPress={() => navigation.navigate('LoginPage')}
+              style={styles.button}
+            >
+            <Text>SignOut</Text>
+          </Pressable>
+        </View>
+      </SafeAreaView>
+    </Background>
   );
 };
 

@@ -7,19 +7,22 @@ import {
   Text,
   View,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  Pressable,
 } from 'react-native';
 import {Auth} from 'aws-amplify';
 import {createStackNavigator} from '@react-navigation/stack';
 import HomeScreen from '../HomeScreen';
 import {withAuthenticator} from 'aws-amplify-react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import { whileStatement } from '@babel/types';
+import {whileStatement} from '@babel/types';
 import logo from '../../assets/images/logo.png';
 import SignUp from '../signUp/index';
 import styles from './styles';
+import Background from '../../components/Background';
+import { ThemeColors } from 'react-navigation';
 
-function LoginPage ({navigation}) {
+function LoginPage({navigation}) {
   const color = '#b5b5b5';
   const activeColor = '#F75C6B';
   const [activeScreen, setActiveScreen] = useState('');
@@ -29,14 +32,13 @@ function LoginPage ({navigation}) {
   const [isActive, setisActive] = useState(true);
   const Stack = createStackNavigator();
 
-
   async function signIn() {
     try {
       await Auth.signIn(username, password);
       setOk(true);
       console.warn('✅ Success');
       // navigation.push('HomeScreen')
-      navigation.navigate('HomeScreen')
+      navigation.navigate('HomeScreen');
     } catch (error) {
       console.warn('❌ Error signing in...', error);
       setOk(false);
@@ -45,31 +47,41 @@ function LoginPage ({navigation}) {
   }
 
   return (
-    <>
-    
+    <Background>
       {isActive ? (
-        <SafeAreaView style={styles.root}>
+        <SafeAreaView>
           <Image
-          source={logo}
-          style={{width: 150, height: 100, marginLeft: '30%', resizeMode: 'contain'}}
-        />
+            source={logo}
+            // eslint-disable-next-line react-native/no-inline-styles
+            style={{
+              width: 150,
+              height: 100,
+              marginLeft: '30%',
+              resizeMode: 'contain',
+            }}
+          />
           <View style={styles.containerInput}>
             <TextInput
               style={styles.TextInput}
               value={username}
               onChangeText={text => setUsername(text)}
+              autoFocus={true}
               leftIcon="account"
               placeholder="username"
+              placeholderTextColor="black"
               autoCapitalize="none"
               keyboardType="email-address"
               textContentType="emailAddress"
+              keyboardAppearance="dark"
             />
+
             <TextInput
               style={styles.TextInput}
               value={password}
               onChangeText={text => setPassword(text)}
               leftIcon="lock"
               placeholder="password"
+              placeholderTextColor="black"
               autoCapitalize="none"
               autoCorrect={false}
               secureTextEntry
@@ -77,15 +89,16 @@ function LoginPage ({navigation}) {
             />
           </View>
           <View style={styles.Button}>
-            <Button title="Login" onPress={signIn} />
+            <Pressable onPress={signIn}>
+              <Text style={styles.ButtonText}>Login</Text>
+            </Pressable>
           </View>
 
-          <TouchableOpacity onPress={() => navigation.navigate('signUp')}>
-            <Text>
-              Don't have an account? Sign Up
-            </Text>
-          </TouchableOpacity>
-
+          <View style={styles.containerSignUpNavigation}>
+            <TouchableOpacity onPress={() => navigation.navigate('signUp')}>
+              <Text style={styles.textContainerSignUpNavigation}>Don't have an account? Sign Up</Text>
+            </TouchableOpacity>
+          </View>
 
           <View style={styles.descriptionContainer}>
             <Text style={styles.description}>
@@ -107,53 +120,8 @@ function LoginPage ({navigation}) {
       ) : (
         <></>
       )}
-    </>
+    </Background>
   );
-};
+}
 
-// const styles = StyleSheet.create({
-//   root: {
-//     flex: 1,
-//     backgroundColor: '#fa4f6b',
-//   },
-
-//   containerInput: {
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//     paddingHorizontal: 20,
-//     marginTop: 50,
-//     color: 'red',
-//   },
-
-//   TextInput: {
-//     width: '100%',
-//     height: 40,
-//     borderRadius: 10,
-//     paddingHorizontal: 30,
-//     fontWeight: 'bold',
-//     fontSize: 20,
-//     textAlign: 'center',
-//     backgroundColor: 'white',
-//     marginBottom: 10,
-//   },
-
-//   Button: {
-//     width: '50%',
-//     backgroundColor: 'white',
-//     borderWidth: 1,
-//     borderColor: 'white',
-//     marginLeft: '25%',
-//     borderRadius: 10,
-//   },
-
-//   descriptionContainer: {
-//       padding: 30,
-//   },
-
-//   description: {
-//     color: "white",
-//     fontSize: 10,
-//   }
-
-// });
 export default LoginPage;

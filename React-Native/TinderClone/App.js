@@ -18,10 +18,11 @@ import {createStackNavigator} from '@react-navigation/stack';
 //aws
 import Amplify from 'aws-amplify';
 import config from './src/aws-exports';
-Amplify.configure({...config,
-    Analytics: {
-      disabled: true,
-    }
+Amplify.configure({
+  ...config,
+  Analytics: {
+    disabled: true,
+  },
 });
 import {withAuthenticator} from 'aws-amplify-react-native';
 
@@ -31,7 +32,15 @@ function App() {
   return (
     <>
       <NavigationContainer style={styles.root}>
-        <Stack.Navigator initialRouteName="HomeScreen">
+        <Stack.Navigator initialRouteName="LoginPage">
+          <Stack.Screen
+            name="LoginPage"
+            component={LoginPage}
+            options={{
+              headerShown: false,
+            }}
+          />
+
           <Stack.Screen
             name="HomeScreen"
             component={HomeScreen}
@@ -81,20 +90,6 @@ const styles = StyleSheet.create({
   root: {
     flex: 1,
   },
-  pageContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex: 1,
-  },
-  topNavigation: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '150%',
-    padding: 5,
-    height: 50,
-    alignItems: 'center',
-    marginLeft: '40%',
-  },
 });
 
-export default withAuthenticator(App);
+export default App;

@@ -1,4 +1,5 @@
 import {Dimensions, StyleSheet} from 'react-native';
+import {theme} from '../../components/Background/theme';
 
 const styles = StyleSheet.create({
   root: {
@@ -11,7 +12,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 20,
     marginTop: 50,
-    color: 'red',
   },
 
   TextInput: {
@@ -19,24 +19,43 @@ const styles = StyleSheet.create({
     height: 40,
     borderRadius: 10,
     paddingHorizontal: 30,
-    fontWeight: 'bold',
     fontSize: 20,
     textAlign: 'center',
-    backgroundColor: 'white',
+    backgroundColor: 'transparent',
+    borderWidth: 1,
+    borderColor: '#FF8C00',
     marginBottom: 10,
   },
 
   Button: {
     width: '50%',
-    backgroundColor: 'white',
+    height: 40,
+    backgroundColor: '#FFC371',
     borderWidth: 1,
-    borderColor: 'white',
+    borderColor: '#FFC371',
     marginLeft: '25%',
     borderRadius: 10,
   },
 
+  ButtonText: {
+    textAlign: 'center',
+    alignItems: 'center',
+    padding: 10,
+    fontSize: 18,
+  },
+
+  containerSignUpNavigation: {
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+  },
+
+  textContainerSignUpNavigation: {
+    color: 'white',
+    fontSize: 15,
+  },
+
   descriptionContainer: {
-    padding: 30,
+    padding: 10,
   },
 
   description: {

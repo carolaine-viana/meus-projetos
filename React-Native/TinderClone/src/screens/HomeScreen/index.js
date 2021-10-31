@@ -14,6 +14,7 @@ import {
 import Card from '../../components/TinderCard/index';
 import AnimatedStack from '../../components/AnimatedStack/index';
 import MatchesScreen from '../MatchesScreen';
+import Background from '../../components/Background';
 
 //imagens
 import closeModalImage from '../../assets/images/close.png';
@@ -93,20 +94,21 @@ function HomeScreen({navigation}) {
       return;
     }
 
-    //verificando se 
+    //verificando se
     const hisMatches = await DataStore.query(Match, match =>
       match.user1ID('aq', currentUser.id).User2ID('aq', me.id),
     );
 
     if (hisMatches.length > 0) {
-      console.log('Yah! this is a new match')
-      const hisMatch = hisMatches[0]
-      DataStore.save(Match.copyOf(hisMatch, updated => (updated.isMatch = true)),
+      console.log('Yah! this is a new match');
+      const hisMatch = hisMatches[0];
+      DataStore.save(
+        Match.copyOf(hisMatch, updated => (updated.isMatch = true)),
       );
       return;
     }
 
-    console.warn('sending him a match request!')
+    console.warn('sending him a match request!');
 
     DataStore.save(
       new Match({
